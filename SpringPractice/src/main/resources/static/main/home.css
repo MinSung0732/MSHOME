@@ -4,10 +4,17 @@ body{
 	display: flex;
     justify-content: center;
     align-items: center;
-/* 	width: 1450px; */
 	margin: 0;
 	padding: 0;
-	background: lightGreen;
+/* 	font-family: 'Inter'; */
+/* 	font-style: normal; */
+/* 	font-weight: 500; */
+/* 	font-size: 20px; */
+/* 	line-height: 150%; */
+}
+
+a{
+	text-decoration: none;
 }
 
 .wrap{
@@ -16,20 +23,102 @@ body{
 	width: 1340px;
 	align-items: center;
 	justify-content: center;
-	background: #BDBDBD;
 }
 
 .header{
 	width: 1280px;
 	height: 216px;
-	background: #FCE1DF;
+	background: #2B3A67;
 	display: flex;
-	justify-content: center;
 }
 
 .topSearchWrap{
 	position: relative;
+	width: 627px;
 	height: 216px;
+}
+
+.topFunctionBar{
+	display: flex;
+	width: 653px;
+	height: 216px;
+}
+
+.topLine{
+	width: 152px;
+	height: 0px;
+	top: 60px;
+	margin-left: 150px;
+	margin-top: 100px;
+	border: 0.5px solid #000000;
+	transform: rotate(90deg);
+}
+
+.topButton{
+	width: 351px;
+	height: 216px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.shoppingBasket{
+	width: 48px;
+	height: 48px;
+	left: 1148px;
+	top: 19px;
+	border-radius: 50%;
+}
+
+.myProfile{
+	width: 48px;
+	height: 48px;
+	left: 1206px;
+	top: 19px;
+	border-radius: 50%;
+}
+
+.message{
+	width: 48px;
+	height: 48px;
+	left: 1264px;
+	top: 19px;
+	border-radius: 50%;
+}
+
+.logo{
+	box-sizing: border-box;
+	position: absolute;
+	width: 96px;
+	height: 96px;
+	left: 68px;
+	top: 19px;
+	border: 1px solid #000000;
+	border-radius: 50%;
+}
+
+.bigTitle{
+	position: absolute;
+	width: 102px;
+	height: 30px;
+	left: 182px;
+	top: 67px;
+	color: #FFFFFF;
+}
+
+.smallTitle{
+	position: absolute;
+	width: 99px;
+	height: 23px;
+	left: 288px;
+	top: 72px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 150%;
+	display: flex;
+	align-items: center;
+	color: #FFFFFF;
 }
 
 .searchBar{
@@ -39,27 +128,297 @@ body{
 	align-items: center;
 	padding: 8px 16px 8px 12px;
 	gap: 12px;
-	position: relative;
-	width: 708px;
+	position: absolute;
+	width: 547px;
 	height: 60px;
+	left: 80px;
+	top: 131px;
 	background: #FFFFFF;
 	border: 1px solid #000000;
 	border-radius: 8px;
+
 }
-
-
 
 .container{
 	width: 1280px;
 	height: 2473px;
-	background: #F9F2DD;
-	
+	background: #FFFFFF;
+	box-sizing: border-box;
+	border: 1px solid #E8E8E8;
+}
+
+.subMenu{
+	box-sizing: border-box;
+	position: relative;
+	width: 1280px;
+	height: 90px;
+	background: #BBDEFB;
+	border-bottom: 1px solid #E0E0E0;
+	display: flex;
+}
+
+.mainBanner{
+	display: flex;
+	flex-direction: row;
+	width: 1280px;
+	height: 550px;
+}
+
+.siteNavi{
+	width: 400px;
+	height: 90px;
+	text-align: center;
+}
+
+.site{
+	height: 40px;
+	left: 80px;
+	top: calc(50% - 30px/2);
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 150%;
+	display: flex;
+	margin-top: 30px;
+	justify-content: center;
+	letter-spacing: -0.01em;
+	color: #000000;
+}
+
+.naviLine{
+	width: 37px;
+	height: 0px;
+	margin-top: 45px;
+	border: 0.5px solid #000000;
+	transform: rotate(90deg);
+}
+
+.naviText{
+	display: flex;
+	width: 360px;
+	flex-direction: row;
+	align-items: flex-start;
+	text-align: center;
+	padding: 0px;
+	height: 90px;
+}
+
+.naviLink{
+	margin-top: 30px;
+	width: 120px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #000000;
+}
+
+.projectCard{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	margin-left: 50px;
+	margin-top: 50px;
+	position: relative;
+	width: 571px;
+	height: 500px;
+}
+
+.rightBanner{
+	width: 659px;
+	height: 543px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bannerImage{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 571px;
+	height: 395px;
+}
+
+.banner{
+	width: 100%;
+	height: 100%;
+}
+
+.bannerTitle{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 571px;
+	height: 99px;
+}
+
+.bannerText{
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 150%;
+	color: #000000;
+}
+
+.bannerContent{
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 150%;
+	color: #828282;
+}
+
+.login{
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+/* 	padding: 12px 16px; */
+	position: relative;
+	width: 476px;
+	height: 342px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	border-radius: 8px;
+}
+
+.inputbar{
+	margin-left: 5px;
+}
+
+.loginMargin{
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.loginId{
+	display: flex;
+	width: 476px;
+	height: 85.5px;
+}
+
+.loginPw{
+	display: flex;
+	width: 476px;
+	height: 65.5px;
+}
+
+.loginSubmit{
+	display: flex;
+	flex-direction: column;
+	width: 476px;
+	height: 171px;
+}
+
+.idText{
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	text-align: center;
+	align-items: center;
+	margin-top: 10px;
+	width: 90px;
+}
+
+.idInput{
+	box-sizing: border-box;
+	position: relative;
+	width: 295px;
+	height: 48px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+}
+
+.pwInput{
+	box-sizing: border-box;
+	position: relative;
+	width: 295px;
+	height: 48px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+}
+
+.loginButton{
+	display: flex;
+	justify-content: flex-end;
+	width: 476px;
+	height: 50px;
+}
+
+#login{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 14px 24px;
+	gap: 8px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #FFFFFF;
+	background-color: black;
+	margin-right: 75px;
+	border-radius: 8px;
+}
+
+.loginLine{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 476px;
+	height: 30px;
+}
+
+.RewardLine{
+	width: 320px;
+	height: 0px;
+	border: 1px solid #000000;
+}
+
+.idPwReward{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+	gap: 32px;
+	position: relative;
+	width: 476px;
+	height: 71px;
+}
+
+.rewardText{
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 110%;
+	letter-spacing: -0.02em;
+	color: #000000;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
 }
 
 .footer{
 	width: 1450px;
 	height: 431px;
-	background: #FDDAB1;
+	background: #2B3A67;
 	display: flex;
 	justify-content: center;
 }

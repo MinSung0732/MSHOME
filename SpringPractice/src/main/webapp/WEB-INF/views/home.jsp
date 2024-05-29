@@ -22,9 +22,9 @@
 			<div class="topFunctionBar">
 				<div class="topLine"></div>
 				<div class="topButton">
-					<img class="shoppingBasket" src="/static/main/ShoppingBasket.png">
-					<img class="myProfile" src="/static/main/MyProfile.png">
-					<img class="message" src="/static/main/Message.png">
+					<a href="#"><img class="shoppingBasket" src="/static/main/ShoppingBasket.png"></a>
+					<a href="/mypage"><img class="myProfile" src="/static/main/MyProfile.png"></a>
+					<a href="#"><img class="message" src="/static/main/Message.png"></a>
 				</div>
 			</div>
 		</div>

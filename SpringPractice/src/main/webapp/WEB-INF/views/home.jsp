@@ -99,6 +99,9 @@
 				</div>
 			</div>
 			<div class="board-List">
+			
+			<%-- 게시판 탭 시작 --%>
+			
 				<div class="board-Category">
 					<div class="category-Tabs">
 						<c:forEach var="category" items="${category}" varStatus="status">
@@ -112,8 +115,11 @@
 							</c:choose>
 							<label class="tab-Item" for="category-Game${status.count}">${category.c_Name}</label>
 						</c:forEach>
+						
+						<%-- 탭 컨텐츠 --%>
+						
 						<div class="tab-Content" id="Game1">
-							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Title">${category[0].c_Name} 게시판</div>
 							<div class="category-Category">
 								<div class="tab-Title">제목</div>
 								<div class="tab-Right">
@@ -136,7 +142,7 @@
 							</div>
 						</div>
 						<div class="tab-Content" id="Game2">
-							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Title">${category[1].c_Name} 게시판</div>
 							<div class="category-Category">
 								<div class="tab-Title">제목</div>
 								<div class="tab-Right">
@@ -159,7 +165,7 @@
 							</div>
 						</div>
 						<div class="tab-Content" id="Game3">
-							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Title">${category[2].c_Name} 게시판</div>
 							<div class="category-Category">
 								<div class="tab-Title">제목</div>
 								<div class="tab-Right">
@@ -182,7 +188,7 @@
 							</div>
 						</div>
 						<div class="tab-Content" id="Game4">
-							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Title">${category[3].c_Name} 게시판</div>
 							<div class="category-Category">
 								<div class="tab-Title">제목</div>
 								<div class="tab-Right">
@@ -205,7 +211,7 @@
 							</div>
 						</div>
 						<div class="tab-Content" id="Game5">
-							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Title">${category[4].c_Name} 게시판</div>
 							<div class="category-Category">
 								<div class="tab-Title">제목</div>
 								<div class="tab-Right">
@@ -228,7 +234,7 @@
 							</div>
 						</div>
 						<div class="tab-Content" id="Game6">
-							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Title">${category[5].c_Name} 게시판</div>
 							<div class="category-Category">
 								<div class="tab-Title">제목</div>
 								<div class="tab-Right">
@@ -251,7 +257,7 @@
 							</div>
 						</div>
 						<div class="tab-Content" id="Game7">
-							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Title">${category[6].c_Name} 게시판</div>
 							<div class="category-Category">
 								<div class="tab-Title">제목</div>
 								<div class="tab-Right">
@@ -274,7 +280,7 @@
 							</div>
 						</div>
 						<div class="tab-Content" id="Game8">
-							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Title">${category[7].c_Name} 게시판</div>
 							<div class="category-Category">
 								<div class="tab-Title">제목</div>
 								<div class="tab-Right">
@@ -297,7 +303,7 @@
 							</div>
 						</div>
 						<div class="tab-Content" id="Game9">
-							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Title">${category[8].c_Name} 게시판</div>
 							<div class="category-Category">
 								<div class="tab-Title">제목</div>
 								<div class="tab-Right">
@@ -315,6 +321,54 @@
 											<div class="tab-Recommend">추천수</div>
 											<div class="tab-Reply">댓글수</div>
 										</div>
+									</div>
+								</c:forEach>
+							</div>
+							
+						<%-- 탭 컨텐츠 --%>
+						
+						</div>
+					</div>
+				</div>
+				
+				<%-- 게시판 탭 끝 --%>
+				
+				<div class="popular-Board">
+					<div class=popular-List>
+						<input id="popular-Post" type="radio" name="popular-Item" checked>
+						<label class="popular-Item" for="popular-Post">인기 게시글</label>
+						<input id="popular-Category" type="radio" name="popular-Item">
+						<label class="popular-Item" for="popular-Category">인기 카테고리</label>
+						<div class="popular-Content" id="post-Popular">
+							<div class="popular-Category">
+								<div class="pl-List">
+									<div class="popular-Title">제목</div>
+									<div class="popular-Hit">조회수</div>
+									<div class="popular-Recommend">추천수</div>
+								</div>
+							</div>
+							<div class="popular-Category-Cotent">
+								<c:forEach var="i" begin="1" end="10" step="1" varStatus="status">
+									<div class="popular-Item-List">
+										<div class="popular-Item-Title">${status.count}.인기 게시글</div>
+										<div class="popular-Item-Hit">0</div>
+										<div class="popular-Item-Recommend">0</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+						<div class="popular-Content" id="category-Popular">
+							<div class="popular-Category">
+								<div class="pl-List2">
+									<div class="popular-Title">제목</div>
+									<div class="popular-Recommend">작성수</div>
+								</div>
+							</div>
+							<div class="popular-Category-Cotent">
+								<c:forEach var="i" begin="1" end="9" step="1" varStatus="status">
+									<div class="popular-Item-List2">
+										<div class="popular-Item-Title2">${status.count}.인기 카테고리</div>
+										<div class="popular-Item-Recommend">0</div>
 									</div>
 								</c:forEach>
 							</div>

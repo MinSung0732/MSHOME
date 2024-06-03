@@ -15,7 +15,7 @@ body{
 
 a{
 	text-decoration: none;
-}
+} /* a 태그 */
 
 .wrap{
 	display: flex;
@@ -23,28 +23,28 @@ a{
 	width: 1340px;
 	align-items: center;
 	justify-content: center;
-}
+} /* 화면전체 */
 
 .header{
 	width: 1280px;
 	height: 216px;
 	background: #2B3A67;
 	display: flex;
-}
+} /* 상단 */
 
-.topSearchWrap{
+.top-Search-Wrap{
 	position: relative;
 	width: 627px;
 	height: 216px;
-}
+} /* 검색 */
 
-.topFunctionBar{
+.top-Function-Bar{
 	display: flex;
 	width: 653px;
 	height: 216px;
-}
+} /* 상단 기능 아이콘 영역 */
 
-.topLine{
+.top-Line{
 	width: 152px;
 	height: 0px;
 	top: 60px;
@@ -52,22 +52,22 @@ a{
 	margin-top: 100px;
 	border: 0.5px solid #000000;
 	transform: rotate(90deg);
-}
+} /* 상단 세로 선 */
 
-.topButton{
+.top-Button{
 	width: 351px;
 	height: 216px;
 	display: flex;
 	justify-content: flex-end;
-}
+} /* 상단 장바구니 내정보 메세지 */
 
-.shoppingBasket{
+.shopping-Basket{
 	width: 48px;
 	height: 48px;
 	left: 1148px;
 	top: 19px;
 	border-radius: 50%;
-}
+} /* 장바구니 */
 
 .myProfile{
 	width: 48px;
@@ -75,7 +75,7 @@ a{
 	left: 1206px;
 	top: 19px;
 	border-radius: 50%;
-}
+} /* 내정보 */
 
 .message{
 	width: 48px;
@@ -83,7 +83,7 @@ a{
 	left: 1264px;
 	top: 19px;
 	border-radius: 50%;
-}
+} /* 메세지 */
 
 .logo{
 	box-sizing: border-box;
@@ -94,18 +94,18 @@ a{
 	top: 19px;
 	border: 1px solid #000000;
 	border-radius: 50%;
-}
+} /* 상단 로고 */
 
-.bigTitle{
+.big-Title{
 	position: absolute;
 	width: 102px;
 	height: 30px;
 	left: 182px;
 	top: 67px;
 	color: #FFFFFF;
-}
+} /* 상단 대제목 */
 
-.smallTitle{
+.small-Title{
 	position: absolute;
 	width: 99px;
 	height: 23px;
@@ -119,9 +119,9 @@ a{
 	display: flex;
 	align-items: center;
 	color: #FFFFFF;
-}
+} /* 상단 소제목 */
 
-.searchBar{
+.search-Bar{
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
@@ -137,17 +137,17 @@ a{
 	border: 1px solid #000000;
 	border-radius: 8px;
 
-}
+} /* 검색창 */
 
 .container{
 	width: 1280px;
-	height: 2473px;
+/* 	height: 2473px; */
 	background: #FFFFFF;
 	box-sizing: border-box;
 	border: 1px solid #E8E8E8;
-}
+} /* 중앙영역 전체 */
 
-.subMenu{
+.sub-Menu{
 	box-sizing: border-box;
 	position: relative;
 	width: 1280px;
@@ -155,20 +155,20 @@ a{
 	background: #BBDEFB;
 	border-bottom: 1px solid #E0E0E0;
 	display: flex;
-}
+} /* 중앙 상단 네비게이션 */
 
-.mainBanner{
+.main-Banner{
 	display: flex;
 	flex-direction: row;
 	width: 1280px;
 	height: 550px;
-}
+} /* 메인 배너, 로그인영역, 사이트개요 */
 
-.siteNavi{
+.site-Navi{
 	width: 400px;
 	height: 90px;
 	text-align: center;
-}
+} /* 네비게이션 */
 
 .site{
 	height: 40px;
@@ -184,17 +184,17 @@ a{
 	justify-content: center;
 	letter-spacing: -0.01em;
 	color: #000000;
-}
+} /* 사이트 바로가기 글 */
 
-.naviLine{
+.navi-Line{
 	width: 37px;
 	height: 0px;
 	margin-top: 45px;
 	border: 0.5px solid #000000;
 	transform: rotate(90deg);
-}
+} /* 중앙 상단 네비게이션 수직선 */
 
-.naviText{
+.navi-Text{
 	display: flex;
 	width: 360px;
 	flex-direction: row;
@@ -202,9 +202,9 @@ a{
 	text-align: center;
 	padding: 0px;
 	height: 90px;
-}
+} /* 네비게이션 텍스트 */
 
-.naviLink{
+.navi-Link{
 	margin-top: 30px;
 	width: 120px;
 	font-family: 'Inter';
@@ -213,9 +213,9 @@ a{
 	font-size: 16px;
 	line-height: 150%;
 	color: #000000;
-}
+} /* 네비게이션 링크 */
 
-.projectCard{
+.project-Card{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -225,55 +225,55 @@ a{
 	position: relative;
 	width: 571px;
 	height: 500px;
-}
+} /* 소개글 이미지 */
 
-.rightBanner{
+.right-Banner{
 	width: 659px;
 	height: 543px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
+} /* 메인배너 오른쪽 영역 */
 
-.bannerImage{
+.banner-Image{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 571px;
 	height: 395px;
-}
+} /* 개요글 이미지 */
 
 .banner{
 	width: 100%;
 	height: 100%;
-}
+} /* 이미지 크기 조절 */
 
-.bannerTitle{
+.banner-Title{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
 	width: 571px;
 	height: 99px;
-}
+} /* 개요글 제목 폰트 */
 
-.bannerText{
+.banner-Text{
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 150%;
 	color: #000000;
-}
+} /* 개요글 소개 */
 
-.bannerContent{
+.banner-Content{
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 150%;
 	color: #828282;
-}
+} /* 개요글 소개글 폰트 */
 
 .login{
 	box-sizing: border-box;
@@ -287,37 +287,37 @@ a{
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
 	border-radius: 8px;
-}
+} /* 로그인 창 */
 
-.inputbar{
+.input-bar{
 	margin-left: 5px;
-}
+} /* 로그인 인풋바 */
 
-.loginMargin{
+.login-Margin{
 	margin-top: 20px;
 	margin-left: 10px;
-}
+} /* 로그인 창 */
 
-.loginId{
+.login-Id{
 	display: flex;
 	width: 476px;
 	height: 85.5px;
-}
+} /* id 입력칸 */
 
-.loginPw{
+.login-Pw{
 	display: flex;
 	width: 476px;
 	height: 65.5px;
-}
+} /* pw 입력칸 */
 
-.loginSubmit{
+.login-Submit{
 	display: flex;
 	flex-direction: column;
 	width: 476px;
 	height: 171px;
-}
+} /* 로그인 결정버튼 */
 
-.idText{
+.id-Text{
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
@@ -327,9 +327,9 @@ a{
 	align-items: center;
 	margin-top: 10px;
 	width: 90px;
-}
+} /* id 입력칸 폰트 */
 
-.idInput{
+.id-Input{
 	box-sizing: border-box;
 	position: relative;
 	width: 295px;
@@ -338,9 +338,9 @@ a{
 	border: 1px solid #E0E0E0;
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 	border-radius: 8px;
-}
+} /* id 입력칸 영역 설정 */
 
-.pwInput{
+.pw-Input{
 	box-sizing: border-box;
 	position: relative;
 	width: 295px;
@@ -349,14 +349,14 @@ a{
 	border: 1px solid #E0E0E0;
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 	border-radius: 8px;
-}
+} /* pw 입력칸 영역 설정 */
 
-.loginButton{
+.login-Button{
 	display: flex;
 	justify-content: flex-end;
 	width: 476px;
 	height: 50px;
-}
+} /* 로그인 버튼 위치 */
 
 #login{
 	display: flex;
@@ -374,23 +374,23 @@ a{
 	background-color: black;
 	margin-right: 75px;
 	border-radius: 8px;
-}
+} /* 로그인 버튼 */
 
-.loginLine{
+.login-Line{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 476px;
 	height: 30px;
-}
+} /* 로그인 영역 직선 */
 
-.RewardLine{
+.Reward-Line{
 	width: 320px;
 	height: 0px;
 	border: 1px solid #000000;
-}
+} /* 로그인 영역 직선 */
 
-.idPwReward{
+.id-Pw-Reward{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -400,9 +400,9 @@ a{
 	position: relative;
 	width: 476px;
 	height: 71px;
-}
+} /* 로그인 유틸기능 영역 */
 
-.rewardText{
+.reward-Text{
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 600;
@@ -413,7 +413,135 @@ a{
 	flex: none;
 	order: 0;
 	flex-grow: 0;
-}
+} /* 로그인 유틸기능 폰트 */
+
+.board-List{
+	width: 1280px;
+	height: 550px;
+} /* 중앙 게시판 및 인기순위 영역 */
+
+.board-Category{
+	width: 888px;
+	height: 550px;
+} /* 게시판 카테고리 영역 */
+
+.category-Tabs{
+	margin-top: 50px;
+	padding-bottom: 40px;
+	width: 745px;
+	background-color: F5F5F5;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	margin: 0 auto;
+} /* 카테고리 탭 스타일 */
+
+.tab-Item{
+	width: calc(100%/9);
+	height: 48px;
+	border-bottom: 3px solid #333333;
+	background-color: #f8f8f8;
+	line-height: 48px;
+	font-size: 16px;
+	text-align: center;
+	color: #333333;
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	transition: all 0.2s ease;
+	overflow: hidden;
+  	text-overflow: clip;
+} /* 카테고리 탭 스타일(영역안) */
+
+.tab-Item:hover {
+	opacity: 0.75;
+} /* 카테고리 탭 마우스 올리면 반투명 */
+
+input[name="tab-Item"]{
+	display: none;
+} /* 라디오 버튼 숨기기 */
+
+.category-Tabs input:checked + .tab-Item {
+	background-color: #333333;
+	color: #fff;
+} /* 선택된 탭 스타일 변경 */
+
+.tab-Content{
+	display: none;
+	padding: 40px 40px 0;
+	clear: both;
+	overflow: hidden;
+} /* 탭 컨텐츠 스타일 */
+
+#category-Game1:checked ~ #Game1,
+#category-Game2:checked ~ #Game2,
+#category-Game3:checked ~ #Game3,
+#category-Game4:checked ~ #Game4,
+#category-Game5:checked ~ #Game5,
+#category-Game6:checked ~ #Game6,
+#category-Game7:checked ~ #Game7,
+#category-Game8:checked ~ #Game8,
+#category-Game9:checked ~ #Game9 {
+	display: block;
+} /* 탭 컨텐츠 표시 */
+
+.category-Title{
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 150%;
+	height: 40px;
+	width: 216px;
+} /* 카테고리 대제목 */
+
+.category-Category{
+	display: flex;
+	width: 745px;
+	height: 30px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	color: #828282;
+} /* 컨텐츠 제목 조회수 추천수 댓글수 스타일 */
+
+.tab-Title{
+	width: 500px;
+} /* 제목 영역 */
+
+.tab-Right{
+	display: flex;
+	width: 245px;
+	gap: 10px;
+} /* 조회수 추천수 댓글수 영역 */
+
+.tab-Content-List{
+	display: flex;
+	width: 680px;
+	height: 32px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #000000;
+	border-bottom-style: solid;
+	border-bottom-color: gray;
+	border-bottom-width: 1px;
+	margin-top: 5px;
+} /* 탭 컨텐츠 스타일 영역 */
+
+.content-Ttile{
+	width: 450px;
+} /* 탭 컨텐츠 제목 영역 */
+
+.content-Right{
+	display: flex;
+	margin-left:160px;
+	width: 230px;
+	gap: 50px;
+} /* 탭 컨텐츠 조회수 추천수 댓글수 영역 */
 
 .footer{
 	width: 1450px;

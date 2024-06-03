@@ -13,81 +13,81 @@
 <body>
 	<div class="wrap">
 		<div class="header">
-			<div class="topSearchWrap">
+			<div class="top-Search-Wrap">
 				<img class="logo" src="/static/main/MSHOME LOGO.png">
-				<p class="bigTitle">M.S HOME</p>
-				<p class="smallTitle">createby.JMS</p>
-				<input type="search" class="searchBar" placeholder="🔎게시물 검색">
+				<p class="big-Title">M.S HOME</p>
+				<p class="small-Title">createby.JMS</p>
+				<input type="search" class="search-Bar" placeholder="🔎게시물 검색">
 			</div>
-			<div class="topFunctionBar">
-				<div class="topLine"></div>
-				<div class="topButton">
-					<a href="#"><img class="shoppingBasket" src="/static/main/ShoppingBasket.png"></a>
+			<div class="top-Function-Bar">
+				<div class="top-Line"></div>
+				<div class="top-Button">
+					<a href="#"><img class="shopping-Basket" src="/static/main/ShoppingBasket.png"></a>
 					<a href="/mypage"><img class="myProfile" src="/static/main/MyProfile.png"></a>
 					<a href="#"><img class="message" src="/static/main/Message.png"></a>
 				</div>
 			</div>
 		</div>
 		<div class="container">
-			<div class="subMenu">
-				<div class="siteNavi">
+			<div class="sub-Menu">
+				<div class="site-Navi">
 					<p class="site">사이트 바로가기</p>
 				</div>
-				<div class="naviLine">
+				<div class="navi-Line">
 				</div>
-				<div class="naviText">
-					<div class="naviLink">
+				<div class="navi-Text">
+					<div class="navi-Link">
 						<a href="#">게시판</a>
 					</div>
-					<div class="naviLink">
+					<div class="navi-Link">
 						<a href="#">고객지원</a>
 					</div>
-					<div class="naviLink">
+					<div class="navi-Link">
 						<a href="#">개요</a>
 					</div>
 				</div>
 			</div>
-			<div class="mainBanner">
-				<div class="projectCard">
-					<div class="bannerImage">
+			<div class="main-Banner">
+				<div class="project-Card">
+					<div class="banner-Image">
 						<img class="banner" src="/static/main/MainBanner.jpg">
 					</div>
-					<div class="bannerTitle">
-						<div class="bannerText">M.S HOME - CRUD PROJECT</div>
-						<div class="bannerContent">대충 프로젝트 만들게된 계기와 어떻게 만들어졌는지에대한 설명</div>
+					<div class="banner-Title">
+						<div class="banner-Text">M.S HOME - CRUD PROJECT</div>
+						<div class="banner-Content">대충 프로젝트 만들게된 계기와 어떻게 만들어졌는지에대한 설명</div>
 					</div>
 				</div>
-				<div class="rightBanner">
+				<div class="right-Banner">
 					<div class="login">
 						<c:choose>
 							<c:when test="${SessionScope.u_Id eq null}">
 							로그인을 해주세요.
-								<div class="loginMargin">
-									<div class="loginId">
-										<div class="idText">ID 입력창:</div>
-										<div class="inputbar">
-											<input class="idInput" type="text" placeholder="아이디를 입력해주세요." maxlength="20">
+								<div class="login-Margin">
+									<div class="login-Id">
+										<div class="id-Text">ID 입력창:</div>
+										<div class="input-bar">
+											<input class="id-Input" type="text" placeholder="아이디를 입력해주세요." maxlength="20">
 										</div>
 									</div>
-									<div class="loginPw">
-										<div class="idText">PW 입력창:</div>
-										<div class="inputbar">
-											<input class="pwInput" type="password" placeholder="비밀번호를 입력해주세요." maxlength="25">
+									<div class="login-Pw">
+										<div class="id-Text">PW 입력창:</div>
+										<div class="input-bar">
+											<input class="pw-Input" type="password" placeholder="비밀번호를 입력해주세요." maxlength="25">
 										</div>
 									</div>
 								</div>
-								<div class="loginSubmit">
-									<div class="loginButton">
+								<div class="login-Submit">
+									<div class="login-Button">
 										<button id="login" type="button">로그인</button>
 									</div>
-									<div class="loginLine">
-										<div class="RewardLine">
+									<div class="login-Line">
+										<div class="Reward-Line">
 										</div>
 									</div>
-									<div class="idPwReward">
-										<div class="rewardText"><a href="#">ID찾기</a></div>
-										<div class="rewardText"><a href="#">PW찾기</a></div>
-										<div class="rewardText"><a href="#">회원가입</a></div>
+									<div class="id-Pw-Reward">
+										<div class="reward-Text"><a href="#">ID찾기</a></div>
+										<div class="reward-Text"><a href="#">PW찾기</a></div>
+										<div class="reward-Text"><a href="#">회원가입</a></div>
 									</div>
 								</div>
 							</c:when>
@@ -98,11 +98,234 @@
 					</div>
 				</div>
 			</div>
+			<div class="board-List">
+				<div class="board-Category">
+					<div class="category-Tabs">
+						<c:forEach var="category" items="${category}" varStatus="status">
+							<c:choose>
+								<c:when test="${status.count eq '1'}">
+									<input id="category-Game${status.count}" type="radio" name="tab-Item" checked>
+								</c:when>
+								<c:otherwise>
+									<input id="category-Game${status.count}" type="radio" name="tab-Item">
+								</c:otherwise>
+							</c:choose>
+							<label class="tab-Item" for="category-Game${status.count}">${category.c_Name}</label>
+						</c:forEach>
+						<div class="tab-Content" id="Game1">
+							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Category">
+								<div class="tab-Title">제목</div>
+								<div class="tab-Right">
+									<div class="tab-Hit">조회수</div>
+									<div class="tab-Recommend">추천수</div>
+									<div class="tab-Reply">댓글수</div>
+								</div>
+							</div>
+							<div class="category-Content">
+								<c:forEach var="i" begin="1" end="6" step="1" varStatus="status">
+									<div class="tab-Content-List">
+										<div class="content-Ttile">${status.count}. 게임1 글</div>
+										<div class="content-Right">
+											<div class="tab-Hit">0</div>
+											<div class="tab-Recommend">0</div>
+											<div class="tab-Reply">0</div>
+										</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+						<div class="tab-Content" id="Game2">
+							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Category">
+								<div class="tab-Title">제목</div>
+								<div class="tab-Right">
+									<div class="tab-Hit">조회수</div>
+									<div class="tab-Recommend">추천수</div>
+									<div class="tab-Reply">댓글수</div>
+								</div>
+							</div>
+							<div class="category-Content">
+								<c:forEach var="i" begin="1" end="6" step="1" varStatus="status">
+									<div class="tab-Content-List">
+										<div class="content-Ttile">${status.count}. 게임2 글</div>
+										<div class="content-Right">
+											<div class="tab-Hit">조회수</div>
+											<div class="tab-Recommend">추천수</div>
+											<div class="tab-Reply">댓글수</div>
+										</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+						<div class="tab-Content" id="Game3">
+							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Category">
+								<div class="tab-Title">제목</div>
+								<div class="tab-Right">
+									<div class="tab-Hit">조회수</div>
+									<div class="tab-Recommend">추천수</div>
+									<div class="tab-Reply">댓글수</div>
+								</div>
+							</div>
+							<div class="category-Content">
+								<c:forEach var="i" begin="1" end="6" step="1" varStatus="status">
+									<div class="tab-Content-List">
+										<div class="content-Ttile">${status.count}. 게임3 글</div>
+										<div class="content-Right">
+											<div class="tab-Hit">조회수</div>
+											<div class="tab-Recommend">추천수</div>
+											<div class="tab-Reply">댓글수</div>
+										</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+						<div class="tab-Content" id="Game4">
+							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Category">
+								<div class="tab-Title">제목</div>
+								<div class="tab-Right">
+									<div class="tab-Hit">조회수</div>
+									<div class="tab-Recommend">추천수</div>
+									<div class="tab-Reply">댓글수</div>
+								</div>
+							</div>
+							<div class="category-Content">
+								<c:forEach var="i" begin="1" end="6" step="1" varStatus="status">
+									<div class="tab-Content-List">
+										<div class="content-Ttile">${status.count}. 게임4 글</div>
+										<div class="content-Right">
+											<div class="tab-Hit">조회수</div>
+											<div class="tab-Recommend">추천수</div>
+											<div class="tab-Reply">댓글수</div>
+										</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+						<div class="tab-Content" id="Game5">
+							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Category">
+								<div class="tab-Title">제목</div>
+								<div class="tab-Right">
+									<div class="tab-Hit">조회수</div>
+									<div class="tab-Recommend">추천수</div>
+									<div class="tab-Reply">댓글수</div>
+								</div>
+							</div>
+							<div class="category-Content">
+								<c:forEach var="i" begin="1" end="6" step="1" varStatus="status">
+									<div class="tab-Content-List">
+										<div class="content-Ttile">${status.count}. 게임5 글</div>
+										<div class="content-Right">
+											<div class="tab-Hit">조회수</div>
+											<div class="tab-Recommend">추천수</div>
+											<div class="tab-Reply">댓글수</div>
+										</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+						<div class="tab-Content" id="Game6">
+							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Category">
+								<div class="tab-Title">제목</div>
+								<div class="tab-Right">
+									<div class="tab-Hit">조회수</div>
+									<div class="tab-Recommend">추천수</div>
+									<div class="tab-Reply">댓글수</div>
+								</div>
+							</div>
+							<div class="category-Content">
+								<c:forEach var="i" begin="1" end="6" step="1" varStatus="status">
+									<div class="tab-Content-List">
+										<div class="content-Ttile">${status.count}. 게임6 글</div>
+										<div class="content-Right">
+											<div class="tab-Hit">조회수</div>
+											<div class="tab-Recommend">추천수</div>
+											<div class="tab-Reply">댓글수</div>
+										</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+						<div class="tab-Content" id="Game7">
+							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Category">
+								<div class="tab-Title">제목</div>
+								<div class="tab-Right">
+									<div class="tab-Hit">조회수</div>
+									<div class="tab-Recommend">추천수</div>
+									<div class="tab-Reply">댓글수</div>
+								</div>
+							</div>
+							<div class="category-Content">
+								<c:forEach var="i" begin="1" end="6" step="1" varStatus="status">
+									<div class="tab-Content-List">
+										<div class="content-Ttile">${status.count}. 게임7 글</div>
+										<div class="content-Right">
+											<div class="tab-Hit">조회수</div>
+											<div class="tab-Recommend">추천수</div>
+											<div class="tab-Reply">댓글수</div>
+										</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+						<div class="tab-Content" id="Game8">
+							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Category">
+								<div class="tab-Title">제목</div>
+								<div class="tab-Right">
+									<div class="tab-Hit">조회수</div>
+									<div class="tab-Recommend">추천수</div>
+									<div class="tab-Reply">댓글수</div>
+								</div>
+							</div>
+							<div class="category-Content">
+								<c:forEach var="i" begin="1" end="6" step="1" varStatus="status">
+									<div class="tab-Content-List">
+										<div class="content-Ttile">${status.count}. 게임8 글</div>
+										<div class="content-Right">
+											<div class="tab-Hit">조회수</div>
+											<div class="tab-Recommend">추천수</div>
+											<div class="tab-Reply">댓글수</div>
+										</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+						<div class="tab-Content" id="Game9">
+							<div class="category-Title">카테고리 제목</div>
+							<div class="category-Category">
+								<div class="tab-Title">제목</div>
+								<div class="tab-Right">
+									<div class="tab-Hit">조회수</div>
+									<div class="tab-Recommend">추천수</div>
+									<div class="tab-Reply">댓글수</div>
+								</div>
+							</div>
+							<div class="category-Content">
+								<c:forEach var="i" begin="1" end="6" step="1" varStatus="status">
+									<div class="tab-Content-List">
+										<div class="content-Ttile">${status.count}. 게임9 글</div>
+										<div class="content-Right">
+											<div class="tab-Hit">조회수</div>
+											<div class="tab-Recommend">추천수</div>
+											<div class="tab-Reply">댓글수</div>
+										</div>
+									</div>
+								</c:forEach>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="footer">
 		
 		</div>
 	</div>
-	
 </body>
 </html>

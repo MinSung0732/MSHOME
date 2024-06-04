@@ -12,22 +12,7 @@
 </head>
 <body>
 	<div class="wrap">
-		<div class="header">
-			<div class="top-Search-Wrap">
-				<img class="logo" src="/static/main/MSHOME LOGO.png">
-				<p class="big-Title">M.S HOME</p>
-				<p class="small-Title">createby.JMS</p>
-				<input type="search" class="search-Bar" placeholder="🔎게시물 검색">
-			</div>
-			<div class="top-Function-Bar">
-				<div class="top-Line"></div>
-				<div class="top-Button">
-					<a href="#"><img class="shopping-Basket" src="/static/main/ShoppingBasket.png"></a>
-					<a href="/mypage"><img class="myProfile" src="/static/main/MyProfile.png"></a>
-					<a href="#"><img class="message" src="/static/main/Message.png"></a>
-				</div>
-			</div>
-		</div>
+		<jsp:include page="/WEB-INF/views/homeDesign/header.jsp"></jsp:include>
 		<div class="container">
 			<div class="sub-Menu">
 				<div class="site-Navi">
@@ -37,7 +22,7 @@
 				</div>
 				<div class="navi-Text">
 					<div class="navi-Link">
-						<a href="#">게시판</a>
+						<a href="/board?category=All">게시판</a>
 					</div>
 					<div class="navi-Link">
 						<a href="#">고객지원</a>
@@ -377,24 +362,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<div class="copyright">
-				<div class="create-Left-Top">
-					<div class="create-Home-Name">M.S HOME</div>
-				</div>
-				<div class="create-Left-Middle">
-					<div class="creator-Tel">TEL. +82-4750-0732</div>
-					<div class="creator-Facebook">FACEBOOK. 조 민 성</div>
-					<div class="creator-Instargram">INSTARGRAM JOHYEONHWAK</div>
-				</div>
-				<div class="create-Left-Bottom">
-					<img src="/static/main/SocialIcons.png" class="socialIcon">
-				</div>
-			</div>
-			<div class="copyright-Right">
-			
-			</div>
-		</div>
+		<jsp:include page="/WEB-INF/views/homeDesign/footer.jsp"></jsp:include>
 	</div>
 </body>
 </html>

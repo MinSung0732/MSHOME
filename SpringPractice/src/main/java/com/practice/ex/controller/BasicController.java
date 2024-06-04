@@ -16,7 +16,7 @@ public class BasicController {
 
 	@GetMapping("/")
 	public String home(Model m) {
-		System.out.println("Home 컨트롤러 진입");
+		System.out.println("--------------------> Home 컨트롤러 진입");
 		m.addAttribute("userInfo", service.userList());
 		m.addAttribute("category", service.categoryList());
 		return "home";

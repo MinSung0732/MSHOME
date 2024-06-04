@@ -10,15 +10,15 @@ import lombok.AllArgsConstructor;
 
 @Controller
 @AllArgsConstructor
-public class MyPageController {
+public class BoardController {
 	
 	private final BasicService service;
 
-	@GetMapping("/mypage")
-	public String mypage(Model m) {
-		System.out.println("--------------------> mypage 컨트롤러 진입");
+	@GetMapping("/board")
+	public String noticeBoard(Model m) {
+		System.out.println("--------------------> noticeBoard 컨트롤러 진입");
 		m.addAttribute("userInfo", service.userList());
-		return "mypage/mypage";
+		return "board/noticeBoard";
 	}
 	
 }

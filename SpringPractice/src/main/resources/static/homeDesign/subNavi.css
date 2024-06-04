@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.sub-Menu {
+	box-sizing: border-box;
+	position: relative;
+	width: 1280px;
+	height: 60px;
+	background: #BBDEFB;
+	border-bottom: 1px solid #E0E0E0;
+	display: flex;
+} /* 중앙 상단 네비게이션 */
+
+.site-Navi {
+	width: 30%;
+	text-align: center;
+} /* 네비게이션 */
+
+.site {
+	left: 80px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	letter-spacing: -0.01em;
+	color: #000000;
+	align-items: center;
+} /* 사이트 바로가기 글 */
+
+.navi-Line {
+	width: 37px;
+	height: 0px;
+	border: 0.5px solid #000000;
+	margin-top:28px;
+	transform: rotate(90deg);
+	display:flex;
+	align-items: center;
+} /* 중앙 상단 네비게이션 수직선 */
+
+.navi-Text {
+	display: flex;
+	width: 360px;
+	justify-content:center;
+	text-align: center;
+	padding: 0px;
+	align-items: center;
+	
+} /* 네비게이션 텍스트 */
+
+.navi-Link {
+	width: 120px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #000000;
+} /* 네비게이션 링크 */

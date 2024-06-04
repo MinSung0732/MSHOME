@@ -20,120 +20,6 @@ a {
 	justify-content: center;
 } /* 화면전체 */
 
-.header {
-	width: 1280px;
-	height: 216px;
-	background: #2B3A67;
-	display: flex;
-} /* 상단 */
-
-.top-Search-Wrap {
-	position: relative;
-	width: 627px;
-	height: 216px;
-} /* 검색 */
-
-.top-Function-Bar {
-	display: flex;
-	width: 653px;
-	height: 216px;
-} /* 상단 기능 아이콘 영역 */
-
-.top-Line {
-	width: 152px;
-	height: 0px;
-	top: 60px;
-	margin-left: 150px;
-	margin-top: 100px;
-	border: 0.5px solid #000000;
-	transform: rotate(90deg);
-} /* 상단 세로 선 */
-
-.top-Button {
-	width: 351px;
-	height: 216px;
-	display: flex;
-	justify-content: flex-end;
-} /* 상단 장바구니 내정보 메세지 */
-
-.shopping-Basket {
-	width: 48px;
-	height: 48px;
-	left: 1148px;
-	top: 19px;
-	border-radius: 50%;
-} /* 장바구니 */
-
-.myProfile {
-	width: 48px;
-	height: 48px;
-	left: 1206px;
-	top: 19px;
-	border-radius: 50%;
-} /* 내정보 */
-
-.message {
-	width: 48px;
-	height: 48px;
-	left: 1264px;
-	top: 19px;
-	border-radius: 50%;
-} /* 메세지 */
-
-.logo {
-	box-sizing: border-box;
-	position: absolute;
-	width: 96px;
-	height: 96px;
-	left: 68px;
-	top: 19px;
-	border: 1px solid #000000;
-	border-radius: 50%;
-} /* 상단 로고 */
-
-.big-Title {
-	position: absolute;
-	width: 102px;
-	height: 30px;
-	left: 182px;
-	top: 67px;
-	color: #FFFFFF;
-} /* 상단 대제목 */
-
-.small-Title {
-	position: absolute;
-	width: 99px;
-	height: 23px;
-	left: 288px;
-	top: 72px;
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 15px;
-	line-height: 150%;
-	display: flex;
-	align-items: center;
-	color: #FFFFFF;
-} /* 상단 소제목 */
-
-.search-Bar {
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 8px 16px 8px 12px;
-	gap: 12px;
-	position: absolute;
-	width: 547px;
-	height: 60px;
-	left: 80px;
-	top: 131px;
-	background: #FFFFFF;
-	border: 1px solid #000000;
-	border-radius: 8px;
-
-} /* 검색창 */
-
 .container {
 	width: 1280px;
 /* 	height: 2473px; */
@@ -142,73 +28,12 @@ a {
 	border: 1px solid #E8E8E8;
 } /* 중앙영역 전체 */
 
-.sub-Menu {
-	box-sizing: border-box;
-	position: relative;
-	width: 1280px;
-	height: 90px;
-	background: #BBDEFB;
-	border-bottom: 1px solid #E0E0E0;
-	display: flex;
-} /* 중앙 상단 네비게이션 */
-
 .main-Banner {
 	display: flex;
 	flex-direction: row;
 	width: 1280px;
 	height: 550px;
 } /* 메인 배너, 로그인영역, 사이트개요 */
-
-.site-Navi {
-	width: 400px;
-	height: 90px;
-	text-align: center;
-} /* 네비게이션 */
-
-.site {
-	height: 40px;
-	left: 80px;
-	top: calc(50% - 30px/2);
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 150%;
-	display: flex;
-	margin-top: 30px;
-	justify-content: center;
-	letter-spacing: -0.01em;
-	color: #000000;
-} /* 사이트 바로가기 글 */
-
-.navi-Line {
-	width: 37px;
-	height: 0px;
-	margin-top: 45px;
-	border: 0.5px solid #000000;
-	transform: rotate(90deg);
-} /* 중앙 상단 네비게이션 수직선 */
-
-.navi-Text {
-	display: flex;
-	width: 360px;
-	flex-direction: row;
-	align-items: flex-start;
-	text-align: center;
-	padding: 0px;
-	height: 90px;
-} /* 네비게이션 텍스트 */
-
-.navi-Link {
-	margin-top: 30px;
-	width: 120px;
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 150%;
-	color: #000000;
-} /* 네비게이션 링크 */
 
 .project-Card {
 	display: flex;

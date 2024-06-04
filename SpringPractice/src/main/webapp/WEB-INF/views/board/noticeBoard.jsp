@@ -12,27 +12,13 @@
 </head>
 <body>
 	<div class="wrap">
+		<%-- header jsp --%>
 		<jsp:include page="/WEB-INF/views/homeDesign/header.jsp"></jsp:include>
 		<div class="container">
-			<div class="sub-Menu">
-				<div class="site-Navi">
-					<p class="site">사이트 바로가기</p>
-				</div>
-				<div class="navi-Line">
-				</div>
-				<div class="navi-Text">
-					<div class="navi-Link">
-						<a href="/board?category=All">게시판</a>
-					</div>
-					<div class="navi-Link">
-						<a href="#">고객지원</a>
-					</div>
-					<div class="navi-Link">
-						<a href="#">개요</a>
-					</div>
-				</div>
-			</div>
+		<%-- subNavi jsp --%>
+		<jsp:include page="/WEB-INF/views/homeDesign/subNavi.jsp"></jsp:include>
 		</div>
+		<%-- footer jsp --%>
 		<jsp:include page="/WEB-INF/views/homeDesign/footer.jsp"></jsp:include>
 	</div>
 </body>

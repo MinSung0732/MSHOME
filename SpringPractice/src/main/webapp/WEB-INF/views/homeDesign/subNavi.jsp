@@ -16,7 +16,7 @@
 		<div class="navi-Line"></div>
 		<div class="navi-Text">
 			<div class="navi-Link">
-				<a href="/board?category=All">게시판</a>
+				<a href="/board?category=리그 오브 레전드">게시판</a>
 			</div>
 			<div class="navi-Link">
 				<a href="#">고객지원</a>

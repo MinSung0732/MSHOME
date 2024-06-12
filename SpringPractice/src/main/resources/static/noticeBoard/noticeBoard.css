@@ -33,7 +33,7 @@ a {
 	position: relative;
 	width: 1280px;
 	height: 150px;
-	background: #DEDEDE;
+/* 	background: #DEDEDE; */
 }
 
 .board-Menu-Bottom {
@@ -62,4 +62,97 @@ a {
 .board-Category:hover {
 	background-color: #000000;
 	color: #ffffff;
+}
+
+.board-List {
+	width: 1280px;
+	height: 800px;
+	box-sizing: border-box;
+	border: 1px solid #E8E8E8;
+}
+
+.board-Name {
+	display: flex;
+	width: 400px;
+	height: 50px;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	color: #000000;
+}
+
+.post-Type {
+	display: flex;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	color: #828282;
+}
+
+.board-Print {
+	flex-direction: column;
+}
+
+.post-List {
+	display: flex;
+	width: 1280px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #000000;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border-bottom-style: solid;
+	border-bottom-color: gray;
+	border-bottom-width: 1px;
+	margin-top: 2px;
+}
+
+.post-No {
+	width: 100px;
+	height: 40px;
+	
+}
+
+.post-Category {
+	width: 100px;
+	height: 40px;
+}
+
+.post-Hit {
+	width: 100px;
+	height: 40px;
+}
+
+.post-Recommend {
+	width: 100px;
+	height: 40px;
+}
+
+.post-Title {
+	width: 600px;
+	height: 40px;
+}
+
+.post-Writer {
+	width: 150px;
+	height: 40px;
+}
+
+.post-Date {
+	width: 150px;
+	height: 40px;
 }

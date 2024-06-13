@@ -156,3 +156,22 @@ a {
 	width: 150px;
 	height: 40px;
 }
+
+.board-Paging {
+	width: 1280px;
+}
+
+#board-Sort {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 8px 16px;
+	gap: 16px;
+	position: relative;
+	width: 120px;
+	height: 25px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	border-radius: 8px;
+}

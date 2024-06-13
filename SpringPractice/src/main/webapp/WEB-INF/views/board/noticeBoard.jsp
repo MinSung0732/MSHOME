@@ -55,6 +55,17 @@
 						</div>
 					</c:forEach>
 				</div>
+				<div class="board-Paging">
+					<div class="board-Paging-Count">
+						<< 1 2 3 4 5 6 7 8 9 10 다음 >>
+					</div>
+					<div class="board-Sort">
+						<select id="sort">
+							<option value="latest">최신순</option>
+							<option value="registration-Order">등록순</option>
+						</select>
+					</div>
+				</div>
 			</div>
 		</div>
 		<%-- footer jsp --%>

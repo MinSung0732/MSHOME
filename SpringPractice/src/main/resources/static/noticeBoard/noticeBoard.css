@@ -161,7 +161,7 @@ a {
 	width: 1280px;
 }
 
-#board-Sort {
+#sort {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
@@ -170,7 +170,7 @@ a {
 	gap: 16px;
 	position: relative;
 	width: 120px;
-	height: 25px;
+	height: 32px;
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
 	border-radius: 8px;

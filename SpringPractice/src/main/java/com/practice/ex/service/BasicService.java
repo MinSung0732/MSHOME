@@ -48,7 +48,6 @@ public class BasicService {
 	}
 	
 	public Long getTotalCount(String category) {
-		System.out.println("서비스 정보 ----> " + category);
 		return bMapper.getTotalCount(category);
 	}
 

@@ -30,6 +30,7 @@ public class BoardController {
 		m.addAttribute("boardList", list);
 		m.addAttribute("paging", pagingBlock);
 		m.addAttribute("boardCount", service.getTotalCount(category));
+		m.addAttribute("category", category);
 		System.out.println("컨트롤러 정보 ----> " + category);
 		return "board/noticeBoard";
 	}

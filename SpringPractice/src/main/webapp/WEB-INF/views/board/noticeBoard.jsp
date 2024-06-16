@@ -44,29 +44,55 @@
 					<div class="post-Recommend">추천수</div>
 				</div>
 				<div class="board-Print">
-					<c:forEach var="i" begin="1" end="10" step="1" varStatus="st">
+					<c:forEach items="${boardList}" var="list" varStatus="st">
 						<div class="post-List">
-							<div class="post-No">${st.count}</div>
-							<div class="post-Category">일반</div>
-							<a href="#"><div class="post-Title">제에모옥</div></a>
-							<div class="post-Writer">익명인</div>
-							<div class="post-Date">2024-06-12</div>
-							<div class="post-Hit">0</div>
-							<div class="post-Recommend">0</div>
+							<div class="post-No">${list.b_No}</div>
+							<div class="post-Category">${list.b_Category}</div>
+							<a href="#"><div class="post-Title">${list.b_Title}</div></a>
+							<div class="post-Writer">${list.u_NickName}</div>
+							<div class="post-Date">${list.b_CreateAt}</div>
+							<div class="post-Hit">${list.b_Hit}</div>
+							<div class="post-Recommend">${list.b_Recommend}</div>
 						</div>
 					</c:forEach>
 				</div>
 				<div class="board-Paging">
-					<div class="board-Paging-Count">
-						<< 1 2 3 4 5 6 7 8 9 10 다음 >>
-					</div>
-					<div class="board-Sort">
-						<select id="sort">
-							<option value="latest">최신순</option>
-							<option value="registration-Order">등록순</option>
-						</select>
-					</div>
-				</div>
+			        <div class="board-Paging-Count">
+			            <ul class="pagination">
+			                <li class="page-item ${paging.pre ? '' : 'disabled'}" id="pre">
+			                    <c:choose>
+	                                <c:when test="${paging.pre}">
+	                                    <a class="page-link" href="/board?category=${category}&page=${paging.page - 1}" aria-label="Previous">
+	                                        <span aria-hidden="true">이전</span>
+	                                    </a>
+	                                </c:when>
+	                                <c:otherwise>
+	                                    <span class="page-link" aria-hidden="true">이전</span>
+	                                </c:otherwise>
+                            	</c:choose>
+			                </li>
+			
+			                <c:forEach var="i" begin="${paging.startNum}" end="${paging.lastNum}">
+			                    <li class="page-item ${paging.page == i ? 'active' : ''}">
+			                        <a class="page-link" href="/board?category=${category}&page=${i}">${i}</a>
+			                    </li>
+			                </c:forEach>
+			
+			                <li class="page-item ${paging.next ? '' : 'disabled'}" id="next">
+			                    <c:choose>
+	                                <c:when test="${paging.next}">
+	                                    <a class="page-link" href="/board?category=${category}&page=${paging.page + 1}" aria-label="Next">
+	                                        <span aria-hidden="true">다음</span>
+	                                    </a>
+	                                </c:when>
+	                                <c:otherwise>
+	                                    <span class="page-link" aria-hidden="true">다음</span>
+	                                </c:otherwise>
+                            	</c:choose>
+			                </li>
+			            </ul>
+			        </div>
+			    </div>
 			</div>
 		</div>
 		<%-- footer jsp --%>

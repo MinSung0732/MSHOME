@@ -10,6 +10,7 @@ import com.practice.ex.dto.user.UserDto;
 import com.practice.ex.mapper.BoardMapper;
 import com.practice.ex.mapper.CategoryMapper;
 import com.practice.ex.mapper.UserMapper;
+import com.practice.ex.porcessor.PagingBlock;
 
 import lombok.AllArgsConstructor;
 
@@ -32,8 +33,18 @@ public class BasicService {
 	}
 	
 	// BoardMapper bMapper 영역
-	public ArrayList<BoardDto> getBoardList(){
-		return bMapper.getBoardList();
+	public ArrayList<BoardDto> getBoardList(PagingBlock pagingBlock,
+											String category){
+		Long totalCount = bMapper.getTotalCount(category);
+		
+		 if (totalCount == 0) {
+	            return new ArrayList<>();
+	     }
+		
+		pagingBlock.setRow();
+		pagingBlock.setNum(totalCount);
+		System.out.println("서비스 정보 ----> " + category);
+		return bMapper.getBoardList(category, pagingBlock.getStartRow(), pagingBlock.getPerPage());
 	}
 	
 	public Long getTotalCount(String category) {

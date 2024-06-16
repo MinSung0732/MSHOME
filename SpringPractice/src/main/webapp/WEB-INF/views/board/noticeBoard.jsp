@@ -33,6 +33,7 @@
 			</div>
 			<div class="board-List">
 				<div class="board-Name">${category} 게시판에 오신것을 환영합니다.</div>
+				게시글 갯수 : ${boardCount}
 				<div class="post-Type">
 					<div class="post-No">작성번호</div>
 					<div class="post-Category">말머리</div>

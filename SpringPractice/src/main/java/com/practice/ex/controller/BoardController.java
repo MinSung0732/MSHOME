@@ -20,6 +20,8 @@ public class BoardController {
 		System.out.println("--------------------> noticeBoard 컨트롤러 진입");
 		m.addAttribute("userInfo", service.userList());
 		m.addAttribute("category", category);
+		m.addAttribute("boardCount", service.getTotalCount(category));
+		System.out.println("컨트롤러 정보 ----> " + category);
 		return "board/noticeBoard";
 	}
 	

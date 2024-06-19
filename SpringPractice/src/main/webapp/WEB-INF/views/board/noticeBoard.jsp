@@ -109,11 +109,23 @@
 	<script>
 		$(document).ready(function () {
 			  $(".board-Category").click(function () {
+				  
 				  var category = $(this).val();
 				  
 				  alert('카테고리 변경: ' + category);
 				  
 				  var newUrl = '/board?category=' + category;
+				  
+				  window.location.href = newUrl;
+			  });
+			  
+			  $(".write").click(function () {
+				  
+				  var category = "${category}";
+				  
+				  alert('현재 카테고리: ' + category);
+				  
+				  var newUrl = '/board/boardWrite?category=' + category;
 				  
 				  window.location.href = newUrl;
 			  });

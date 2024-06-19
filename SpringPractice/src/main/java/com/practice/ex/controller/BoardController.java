@@ -35,4 +35,11 @@ public class BoardController {
 		return "board/noticeBoard";
 	}
 	
+	@GetMapping("/board/boardWrite")
+	public String Write(@RequestParam(name = "category" , required = false, defaultValue = "리그 오브 레전드") String category,
+			Model m) {
+		System.out.println("--------------------> boardWrite 컨트롤러 진입");
+		return "board/boardWrite";
+	}
+	
 }

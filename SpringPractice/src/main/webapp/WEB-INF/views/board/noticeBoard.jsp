@@ -59,39 +59,46 @@
 				<div class="board-Paging">
 			        <div class="board-Paging-Count">
 			            <ul class="pagination">
-			                <li class="page-item ${paging.pre ? '' : 'disabled'}" id="pre">
-			                    <c:choose>
-	                                <c:when test="${paging.pre}">
-	                                    <a class="page-link" href="/board?category=${category}&page=${paging.page - 1}" aria-label="Previous">
-	                                        <span aria-hidden="true">이전</span>
-	                                    </a>
-	                                </c:when>
-	                                <c:otherwise>
-	                                    <span class="page-link" aria-hidden="true">이전</span>
-	                                </c:otherwise>
-                            	</c:choose>
-			                </li>
-			
+		                    <c:choose>
+		                    <%-- 이전 버튼 활성화 / 비활성화 --%>
+                                <c:when test="${paging.pre}">
+                                    <a class="page-link" href="/board?category=${category}&page=${paging.page - 1}" aria-label="Previous">
+                                        <span aria-hidden="true"><<</span>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="page-link" aria-hidden="true"><<</span>
+                                </c:otherwise>
+                           	</c:choose>
+                           	
+                           	<%-- 페이징 숫자 구현 --%>
 			                <c:forEach var="i" begin="${paging.startNum}" end="${paging.lastNum}">
-			                    <li class="page-item ${paging.page == i ? 'active' : ''}">
-			                        <a class="page-link" href="/board?category=${category}&page=${i}">${i}</a>
-			                    </li>
+			                    <div class="paging-Number">
+			                    	<c:if test="${i == paging.page}">
+			                    		<span class="page-Link" id="page-Current">${i}</span>
+			                    	</c:if>
+			                    	<c:if test="${i != paging.page}">
+				                    	<a class="page-link" href="/board?category=${category}&page=${i}">${i}</a>
+			                    	</c:if>
+			                    </div>
 			                </c:forEach>
-			
-			                <li class="page-item ${paging.next ? '' : 'disabled'}" id="next">
-			                    <c:choose>
-	                                <c:when test="${paging.next}">
-	                                    <a class="page-link" href="/board?category=${category}&page=${paging.page + 1}" aria-label="Next">
-	                                        <span aria-hidden="true">다음</span>
-	                                    </a>
-	                                </c:when>
-	                                <c:otherwise>
-	                                    <span class="page-link" aria-hidden="true">다음</span>
-	                                </c:otherwise>
-                            	</c:choose>
-			                </li>
+			                
+			                <%-- 다음 버튼 활성화 / 비활성화 --%>
+		                    <c:choose>
+                                <c:when test="${paging.next}">
+                                    <a class="page-link" href="/board?category=${category}&page=${paging.page + 1}" aria-label="Next">
+                                        <span aria-hidden="true">>></span>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="page-link" aria-hidden="true">>></span>
+                                </c:otherwise>
+                           	</c:choose>
 			            </ul>
 			        </div>
+				    <div class="post-create">
+				    	<button type="button" class="write">글 쓰기</button>
+				    </div>
 			    </div>
 			</div>
 		</div>

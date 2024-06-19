@@ -128,7 +128,7 @@ a {
 }
 
 .post-Category {
-	width: 100px;
+	width: 140px;
 	height: 40px;
 }
 
@@ -143,8 +143,11 @@ a {
 }
 
 .post-Title {
-	width: 600px;
+	width: 530px;
 	height: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .post-Writer {
@@ -158,7 +161,43 @@ a {
 }
 
 .board-Paging {
+	display: flex;
 	width: 1280px;
+}
+
+.board-Paging-Count {
+	width: 1000px;
+}
+
+.post-create {
+	width: 280px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	text-align: right;
+}
+
+.write {
+	padding: 0px 16px;
+	gap: 8px;
+	background: #EEEEEE;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 150%;
+	color: #000000;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.pagination {
+	display: flex;
+}
+
+.paging-Number {
+	width: 25px;
 }
 
 #sort {

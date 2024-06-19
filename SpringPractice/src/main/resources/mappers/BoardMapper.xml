@@ -6,10 +6,27 @@
 <mapper namespace="com.practice.ex.mapper.BoardMapper">
 	
 	<select id="getBoardList" resultType="com.practice.ex.dto.board.BoardDto">
-		SELECT * FROM Board
-		WHERE B_Category = #{category}
-		ORDER BY B_No DESC
-		LIMIT #{startRow}, #{perPage}
+		SELECT 
+		     B_No, 
+		     B_Category, 
+		     U_Id, 
+		     U_NickName, 
+		     U_Image, 
+		     B_Title, 
+		     B_Hit, 
+		     B_Content, 
+		     B_ReplyCount, 
+		     DATE_FORMAT(B_CreateAt, '%Y-%m-%d') AS B_CreateAt, 
+		     B_UpdateAt, 
+		     B_Recommend
+		 FROM 
+		     Board
+		 WHERE 
+		     B_Category = #{category}
+		 ORDER BY 
+		     B_No DESC
+		 LIMIT 
+		     #{startRow}, #{perPage}
 	</select>
 	
 	<select id="getTotalCount" resultType="Long">

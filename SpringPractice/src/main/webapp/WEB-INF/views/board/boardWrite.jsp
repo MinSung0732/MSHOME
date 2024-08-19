@@ -19,7 +19,7 @@
 		<div class="container">
 			<%-- subNavi jsp --%>
 			<jsp:include page="/WEB-INF/views/homeDesign/subNavi.jsp"></jsp:include>
-			글쓰기로 진입했어용
+			글쓰기로 진입했어용@
 		</div>
 		<%-- footer jsp --%>
 		<jsp:include page="/WEB-INF/views/homeDesign/footer.jsp"></jsp:include>

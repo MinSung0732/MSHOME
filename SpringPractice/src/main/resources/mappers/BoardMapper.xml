@@ -34,4 +34,8 @@
 		WHERE B_Category = #{category}
 	</select>
 	
+	<select id="readBoard" resultType="com.practice.ex.dto.board.BoardDto">
+		select * from Board where B_No = ${bno}
+	</select>
+	
 </mapper>

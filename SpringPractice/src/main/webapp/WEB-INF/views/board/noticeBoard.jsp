@@ -48,7 +48,7 @@
 						<div class="post-List">
 							<div class="post-No">${list.b_No}</div>
 							<div class="post-Category">${list.b_Category}</div>
-							<a href="#"><div class="post-Title">${list.b_Title}</div></a>
+							<a href="/board/boardRead?categroy=${category}&bno=${list.b_No}" class="read"><div class="post-Title">${list.b_Title}</div></a>
 							<div class="post-Writer">${list.u_NickName}</div>
 							<div class="post-Date">${list.b_CreateAt}</div>
 							<div class="post-Hit">${list.b_Hit}</div>

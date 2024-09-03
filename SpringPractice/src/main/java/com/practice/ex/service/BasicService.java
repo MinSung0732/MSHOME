@@ -50,5 +50,9 @@ public class BasicService {
 	public Long getTotalCount(String category) {
 		return bMapper.getTotalCount(category);
 	}
+	
+	public BoardDto read(String bno) {
+		return bMapper.readBoard(bno);
+	}
 
 }

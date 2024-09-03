@@ -19,8 +19,13 @@
 		<div class="container">
 			<%-- subNavi jsp --%>
 			<jsp:include page="/WEB-INF/views/homeDesign/subNavi.jsp"></jsp:include>
-			글쓰기로 진입했어용
-			
+			글읽기로 진입했어용
+			<br>
+			글번호: ${readContent.b_No}
+			<br>
+			글제목: ${readContent.b_Title}
+			<br>
+			글내용: ${readContent.b_Content}
 		</div>
 		<%-- footer jsp --%>
 		<jsp:include page="/WEB-INF/views/homeDesign/footer.jsp"></jsp:include>

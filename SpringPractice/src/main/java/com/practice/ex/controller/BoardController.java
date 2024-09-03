@@ -42,4 +42,14 @@ public class BoardController {
 		return "board/boardWrite";
 	}
 	
+	@GetMapping("/board/boardRead")
+	public String Read(@RequestParam(name = "category" , required = false, defaultValue = "리그 오브 레전드") String category,
+			@RequestParam(name = "bno" , required = false, defaultValue = "0") String bno,
+			Model m) {
+		System.out.println("--------------------> boardRead 컨트롤러 진입");
+		m.addAttribute("readContent", service.read(bno));
+		System.out.println(service.read(bno));
+		return "board/boardRead";
+	}
+	
 }

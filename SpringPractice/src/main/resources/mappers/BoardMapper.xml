@@ -35,7 +35,15 @@
 	</select>
 	
 	<select id="readBoard" resultType="com.practice.ex.dto.board.BoardDto">
-		select * from Board where B_No = ${bno}
+		select * from Board where B_No = ${bno} and B_Category = '${category}'
 	</select>
+
+	<update id="viewPoint">
+		update Board set B_Hit = B_Hit + 1 where B_No = ${bno}
+	</update>
+	
+	<delete id="delBoard">
+		delete from Board where B_No = ${bno} and B_Category = '${category}'
+	</delete>
 	
 </mapper>

@@ -18,6 +18,11 @@ public interface BoardMapper {
 											@Param("startRow") Long startRow,
 											@Param("perPage") Long perPage);
 	public Long getTotalCount(@RequestParam(value="category" , defaultValue="리그 오브 레전드") String category);
-	public BoardDto readBoard(String bno);
+	public BoardDto readBoard(
+								@Param("bno") String bno,
+								@Param("category") String category);
+	public Long viewPoint(@Param("bno") String bno);
+	public void delBoard(
+								@Param("bno") String bno,
+								@Param("category") String category);
 }
-

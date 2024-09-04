@@ -12,7 +12,6 @@
 <title>M.S Board</title>
 </head>
 <body>
-
 	<div class="wrap">
 		<%-- header jsp --%>
 		<jsp:include page="/WEB-INF/views/homeDesign/header.jsp"></jsp:include>
@@ -21,15 +20,46 @@
 			<jsp:include page="/WEB-INF/views/homeDesign/subNavi.jsp"></jsp:include>
 			글읽기로 진입했어용
 			<br>
+			글분류: ${category}
+			<br>
 			글번호: ${readContent.b_No}
 			<br>
 			글제목: ${readContent.b_Title}
 			<br>
 			글내용: ${readContent.b_Content}
+			<br>
+			조회수: ${readContent.b_Hit}
+			<br><br>
+			<button class="delBtn">삭제</button>
 		</div>
 		<%-- footer jsp --%>
 		<jsp:include page="/WEB-INF/views/homeDesign/footer.jsp"></jsp:include>
 	</div>
 	
+	<script>
+		$(document).ready(function () {
+			$(".delBtn").click(function () {
+				
+				var category = "${category}";
+				var bno = "${readContent.b_No}";
+				
+				$.ajax({
+					type: "POST",
+					url: "/board/delBoard",
+					data: {
+						category: category,
+						bno: bno
+					},
+					success: function(response) {
+						alert("글삭제 완료");
+						window.location.href = "/board?category=" + category;
+					},
+					error: function(xhr, status, error) {
+						alert("Error: " + error);
+					}
+				});
+			});
+		});
+	</script>
 </body>
 </html>

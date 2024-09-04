@@ -51,8 +51,16 @@ public class BasicService {
 		return bMapper.getTotalCount(category);
 	}
 	
-	public BoardDto read(String bno) {
-		return bMapper.readBoard(bno);
+	public BoardDto read(String bno, String category) {
+		return bMapper.readBoard(bno,category);
+	}
+	
+	public Long viewPoint(String bno) {
+		return bMapper.viewPoint(bno);
+	}
+	
+	public void delBoard(String bno, String category) {
+		bMapper.delBoard(bno, category);
 	}
 
 }
